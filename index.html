@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,18 +17,18 @@
 <meta name="twitter:title" content="Ahmed Elbanna">
 <meta name="twitter:description" content="Engineer, founder, creator. UC Berkeley ’28.">
 <meta name="twitter:image" content="https://ahmedmelbanna.com/og.png">
-<meta name="theme-color" content="#f3efe6">
+<meta name="theme-color" content="#100f0d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%232340e8'/%3E%3Cpath fill='%23f3efe6' d='M3 1h2v1H3zM2 2h1v5H2zM5 2h1v5H5zM3 4h2v1H3z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ───────────────────────── tokens ───────────────────────── */
 :root{
   --bg:#f3efe6; --paper:#faf8f2; --ink:#161513; --muted:#6f6b62; --line:#d9d2c3; --soft:#e8e2d5;
   --accent:#2340e8; --on-accent:#ffffff;
   --phone:#ffffff; --in:#e9e9eb; --in-ink:#000000; --out:#0b84ff; --ios-muted:#8e8e93; --ios-line:#e5e5ea;
-  --serif:"EB Garamond","Garamond","Times New Roman",Times,serif;
+  --serif:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --pixel:"Pixelify Sans",ui-monospace,"Courier New",monospace;
   --ios:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
   --col:760px;
@@ -41,7 +41,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:20px;line-height:1.6;
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-weight:500;font-size:17px;line-height:1.6;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;transition:background .4s,color .4s;overflow-x:hidden}
 ::selection{background:var(--accent);color:var(--on-accent)}
 a{color:inherit;text-decoration:none}
@@ -52,6 +52,7 @@ img{max-width:100%;display:block}
 canvas.sprite,canvas.me{image-rendering:pixelated;image-rendering:crisp-edges;display:block}
 
 .wide{max-width:1240px}
+#hello{scroll-margin-top:70px}
 .d-only{display:none}
 .side-label{color:var(--muted);margin-bottom:14px}
 .side-label span{color:var(--accent);margin-right:6px}
@@ -90,7 +91,7 @@ h1#name .w{display:inline-block}
 .say.on{opacity:1}
 
 /* ───────────────────────── sections ───────────────────────── */
-section.block{padding:140px 28px 40px;scroll-margin-top:24px}
+section.block{padding:140px 28px 40px;scroll-margin-top:70px}
 h2{font-family:var(--pixel);font-weight:600;font-size:clamp(44px,7vw,68px);line-height:1;letter-spacing:-.01em;margin-bottom:14px;display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
 h2 .num{font-size:16px;font-weight:400;color:var(--accent);align-self:flex-start;margin-top:4px}
 h2 .ht{position:relative;display:inline-block}
@@ -147,18 +148,18 @@ h2 .ht{position:relative;display:inline-block}
 /* ───────────────────────── experience ───────────────────────── */
 .edu{display:grid;grid-template-columns:150px 1fr;gap:6px 26px;padding:26px 0;border-top:1px solid var(--ink);margin-top:40px}
 .edu .d,.log summary .d{color:var(--muted);font-family:var(--pixel);font-size:15px;padding-top:4px}
-.edu h3,.log summary h3{font-weight:500;font-size:23px;line-height:1.3}
-.edu p{color:var(--muted);font-size:18.5px;margin-top:4px}
+.edu h3,.log summary h3{font-weight:700;font-size:19px;line-height:1.35;letter-spacing:-.01em}
+.edu p{color:var(--muted);font-size:16px;margin-top:6px}
 .log details{border-top:1px solid var(--line)}
 .log details:last-child{border-bottom:1px solid var(--line)}
 .log summary{list-style:none;display:grid;grid-template-columns:150px 1fr auto;gap:6px 26px;padding:24px 0;cursor:pointer;align-items:baseline}
 .log summary::-webkit-details-marker{display:none}
-.log summary h3 span{font-weight:400;font-style:italic;color:var(--muted)}
+.log summary h3 span{font-weight:500;color:var(--muted)}
 .log summary .tog{color:var(--accent);font-family:var(--pixel);font-size:22px;width:16px;text-align:center;transition:transform .2s steps(2)}
 .log details[open] summary .tog{transform:rotate(45deg)}
 .log summary:hover h3{color:var(--accent)}
 .log ul{list-style:none;padding:0 0 26px 176px}
-.log li{position:relative;padding-left:22px;margin:8px 0;font-size:18.5px;line-height:1.55}
+.log li{position:relative;padding-left:22px;margin:8px 0;font-size:16px;line-height:1.6}
 .log li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--accent)}
 .log li.where{color:var(--muted);font-family:var(--pixel);font-size:14px;margin-top:14px}
 .log li.where::before{display:none}
@@ -184,7 +185,7 @@ h2 .ht{position:relative;display:inline-block}
 .card .body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:12px}
 .card .role{color:var(--muted)}
 .card h3{font-family:var(--pixel);font-weight:600;font-size:34px;line-height:1.1}
-.card p{font-size:19px;line-height:1.55}
+.card p{font-size:16px;line-height:1.6}
 .nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
 .nums.n3{grid-template-columns:repeat(3,1fr)}
 .nums.n2{grid-template-columns:repeat(2,1fr)}
@@ -192,14 +193,14 @@ h2 .ht{position:relative;display:inline-block}
 .nums div{padding:20px 20px 18px;border-right:1px solid var(--line)}
 .nums div:last-child{border-right:0}
 .nums b{display:block;font-family:var(--pixel);font-weight:600;font-size:40px;line-height:1;color:var(--accent)}
-.nums span{display:block;margin-top:8px;font-size:17px;color:var(--muted);line-height:1.3}
+.nums span{display:block;margin-top:8px;font-size:14.5px;color:var(--muted);line-height:1.3}
 .card .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
 
 /* ───────────────────────── off the clock ───────────────────────── */
 .life{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin-top:44px}
 .life > div{padding:28px 18px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:18px;min-height:160px}
 .life > div:last-child{border-right:0}
-.life p{font-size:18px;line-height:1.4}
+.life p{font-size:15.5px;line-height:1.45}
 .shelf{margin-top:56px;position:relative}
 .bottles{display:flex;flex-wrap:wrap;align-items:flex-end;gap:0 5px;padding:0 84px 0 4px;background:repeating-linear-gradient(to bottom,transparent 0 61px,var(--ink) 61px 64px)}
 .bottle{cursor:pointer;transition:transform .2s steps(3);height:64px;padding-bottom:3px;display:flex;align-items:flex-end}
@@ -208,18 +209,18 @@ h2 .ht{position:relative;display:inline-block}
 .shelf .cap{display:flex;justify-content:space-between;gap:16px;margin-top:14px;color:var(--muted)}
 
 /* ───────────────────────── contact ───────────────────────── */
-.lead{font-size:clamp(26px,3.6vw,34px);line-height:1.3;max-width:620px;margin:22px 0 34px}
+.lead{font-size:clamp(22px,2.8vw,28px);font-weight:600;letter-spacing:-.015em;line-height:1.35;max-width:620px;margin:22px 0 34px}
 .btnrow{display:flex;flex-wrap:wrap;gap:12px}
 .btn{font-family:var(--pixel);font-size:16px;padding:12px 18px 13px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer;
   display:inline-flex;align-items:center;gap:10px;transition:transform .12s steps(2),box-shadow .12s steps(2)}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn.sm{font-size:14px;padding:8px 13px 9px}
-.email-line{margin-top:26px;color:var(--muted);font-size:19px}
+.email-line{margin-top:26px;color:var(--muted);font-size:16px}
 footer{padding:130px 0 140px;color:var(--muted)}
 
 /* ───────────────────────── dock ───────────────────────── */
-.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:2px;
+.dock{position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:2px;
   background:var(--paper);border:1px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:4px;max-width:calc(100vw - 20px)}
 .dock a,.dock button{font-family:var(--pixel);font-size:14px;padding:6px 10px 7px;color:var(--muted);background:none;border:0;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px}
 .dock a:hover,.dock button:hover{color:var(--ink)}
@@ -235,7 +236,7 @@ footer{padding:130px 0 140px;color:var(--muted)}
 
 /* ───────────────────────── responsive ───────────────────────── */
 @media (max-width:760px){
-  body{font-size:18.5px}
+  body{font-size:16.5px}
   .wrap{padding:0 22px}
   section.block{padding:110px 22px 30px}
   .hero-row{gap:14px}
@@ -271,7 +272,7 @@ footer{padding:130px 0 140px;color:var(--muted)}
   .thread{height:clamp(250px,calc(100svh - 480px),380px);min-height:0;overflow-y:auto;scrollbar-width:none}
   .thread::-webkit-scrollbar{display:none}
   .split{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:start}
-  .split-head{position:sticky;top:70px}
+  .split-head{position:sticky;top:96px}
   .split h2{font-size:clamp(40px,3.8vw,54px);flex-wrap:nowrap}
   .split .edu{margin-top:0}
   #life .life{margin-top:0}
@@ -284,7 +285,7 @@ footer{padding:130px 0 140px;color:var(--muted)}
   #pf .thumb{border-right:0;border-bottom:1px solid var(--ink);min-height:200px}
   #pf .card .body{padding:22px 22px 24px}
   #pf .card h3{font-size:28px}
-  #pf .card p{font-size:18px}
+  #pf .card p{font-size:15.5px}
   #pf .nums,#pf .nums.n3{grid-template-columns:1fr 1fr}
   #pf .nums div{padding:16px 18px 14px}
   #pf .nums div:nth-child(2n){border-right:0}
@@ -807,7 +808,7 @@ async function startChat(){
 
 /* ---------- experience ---------- */
 $("#log").innerHTML = LOG.map((e, i) => `
-  <details${i === 0 ? " open" : ""}>
+  <details open>
     <summary>
       <span class="d">${e.d}</span>
       <h3>${e.role} <span>· ${e.org}</span></h3>
@@ -882,7 +883,7 @@ new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.for
 
 /* ---------- boot ---------- */
 setupMe();
-setTheme(store.get("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+setTheme(store.get("theme") || "dark");
 addEventListener("resize", () => meList.forEach(drawMe));
 const fontsReady = document.fonts ? Promise.race([document.fonts.ready, sleep(1800)]) : sleep(300);
 fontsReady.then(() => { redrawSprites(); heroAssemble(); setTimeout(typeLoop, 1700); });
