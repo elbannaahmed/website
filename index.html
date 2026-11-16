@@ -266,8 +266,10 @@ footer{padding:130px 0 140px;color:var(--muted)}
 /* ── laptop: horizontal layout ── */
 @media (min-width:1000px){
   .hero{padding:96px 0 130px}
-  .hero-grid{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center}
-  h1#name{width:auto;white-space:nowrap;font-size:clamp(56px,5.9vw,88px)}
+  .hero .wide{max-width:1380px}
+  .hero-grid{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:clamp(56px,8vw,120px);align-items:center}
+  .hero-side{justify-self:end;width:400px}
+  h1#name{width:auto;white-space:nowrap;font-size:clamp(46px,calc(4.4vw + 4px),84px)}
   .d-only{display:block}
   .m-only{display:none!important}
   .phone{margin:0;box-shadow:8px 8px 0 var(--ink)}
