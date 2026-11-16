@@ -75,13 +75,11 @@ h1#name .w{display:inline-block}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .btn.ghost{border-color:transparent;background:transparent;color:var(--muted)}
 .btn.ghost:hover{color:var(--ink);box-shadow:none;transform:none}
-.route{margin-top:64px;position:relative;display:flex;align-items:center;gap:14px;color:var(--muted);max-width:600px}
+.route{margin-top:60px;position:relative;display:flex;align-items:center;gap:14px;color:var(--muted);max-width:600px}
 .route .seg{flex:1;height:2px;background-image:linear-gradient(90deg,var(--line) 50%,transparent 50%);background-size:8px 2px}
 .route b{font-weight:500;color:var(--ink)}
-.route .plane{position:absolute;bottom:74px;left:0;z-index:2;animation:fly 14s steps(56) infinite}
-.route{align-items:flex-end}
-.route .stop{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
-.route .seg{margin-bottom:10px;min-width:16px}
+.route .plane{position:absolute;top:-24px;left:0;z-index:2;animation:fly 14s steps(56) infinite}
+.route .seg{min-width:16px}
 @keyframes fly{0%{left:0;opacity:0}4%{opacity:1}92%{opacity:1}100%{left:calc(100% - 30px);opacity:0}}
 .meta{display:flex;flex-wrap:wrap;gap:10px 34px;margin-top:40px;color:var(--muted)}
 
@@ -200,6 +198,77 @@ h2 .ht{position:relative;display:inline-block}
 .nums b{display:block;font-family:var(--pixel);font-weight:600;font-size:40px;line-height:1;color:var(--accent)}
 .nums span{display:block;margin-top:8px;font-size:14.5px;color:var(--muted);line-height:1.3}
 .card .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+
+/* projects (flat, all visible) */
+#portfolio .pf-label{display:flex;align-items:center;gap:12px;color:var(--muted);margin:64px 0 18px}
+#portfolio .pf-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.proj{box-shadow:8px 8px 0 var(--ink);overflow:hidden}
+.proj + .proj{margin-top:40px}
+.proj .role{color:var(--muted)}
+.proj-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 32px;padding:30px 32px 26px;flex-wrap:wrap}
+.proj-head > div:first-child{max-width:780px}
+.proj-head h3{font-family:var(--pixel);font-weight:600;font-size:clamp(32px,3.6vw,46px);line-height:1.05;margin-top:8px}
+.proj-head .kicker{color:var(--muted);font-size:16.5px;line-height:1.6;margin-top:10px}
+.proj .links{display:flex;gap:10px;flex-wrap:wrap}
+.statwall{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.statwall.s4{grid-template-columns:repeat(4,1fr)}
+.statwall div{padding:22px 22px 20px;border-right:1px solid var(--line)}
+.statwall div:last-child{border-right:0}
+.statwall b{display:block;font-family:var(--pixel);font-weight:600;font-size:clamp(28px,2.8vw,40px);line-height:1;color:var(--accent)}
+.statwall span{display:block;margin-top:10px;font-size:14px;color:var(--muted);line-height:1.35}
+.proj-body{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:44px;padding:32px}
+.prose p{font-size:16.5px;line-height:1.7}
+.prose p + p{margin-top:14px}
+.facts{display:flex;flex-direction:column;gap:20px}
+.fact > span{display:block;color:var(--muted);margin-bottom:9px;font-size:14px}
+.tagset{display:flex;flex-wrap:wrap;gap:8px}
+.tagset i{font-style:normal;font-size:14px;font-weight:600;padding:6px 12px 7px;border:1px solid var(--line);line-height:1.2}
+.roll{padding:4px 32px 32px}
+.roll-label{display:flex;align-items:center;gap:12px;color:var(--muted);margin-bottom:16px}
+.roll-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.roll-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.roll-grid figure{margin:0}
+.roll-grid img{width:100%;aspect-ratio:9/13;object-fit:cover;border-radius:14px;border:1px solid var(--line);transition:transform .25s ease}
+.roll-grid figure:hover img{transform:translateY(-4px)}
+.roll-grid figcaption{margin-top:10px;font-size:14px;font-weight:600;color:var(--muted)}
+.meta-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.meta-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:28px}
+.meta-photos img{width:100%;aspect-ratio:3/4.3;object-fit:cover;border-radius:6px}
+.meta-text{padding:36px 32px;display:flex;flex-direction:column;justify-content:center;gap:14px;border-left:1px solid var(--line)}
+.meta-text h3{font-family:var(--pixel);font-weight:600;font-size:clamp(28px,3vw,38px);line-height:1.1}
+.meta-text p{font-size:16.5px;line-height:1.7}
+.cases{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.case{padding:28px 32px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case:nth-child(2n){border-right:0}
+.case:nth-last-child(-n+2){border-bottom:0}
+.case h4{font-family:var(--pixel);font-weight:600;font-size:19px;color:var(--accent);margin-bottom:10px}
+.case p{font-size:16px;line-height:1.7}
+#p-ecc .roll{padding-top:28px}
+.pages{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pages img{width:100%;aspect-ratio:1/1.414;object-fit:cover;object-position:top;border:1px solid var(--line);background:#fff;transition:transform .25s ease}
+.pages a:hover img{transform:translateY(-4px)}
+.video{position:relative;aspect-ratio:16/9;background:#000;border-bottom:1px solid var(--ink)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.rounds-chips{padding:0 32px 30px}
+@media (max-width:760px){
+  .proj-head{padding:24px 20px 20px}
+  .statwall,.statwall.s4{grid-template-columns:1fr 1fr}
+  .statwall div{border-bottom:1px solid var(--line)}
+  .statwall div:nth-child(2n){border-right:0}
+  .statwall div:nth-last-child(-n+2){border-bottom:0}
+  .proj-body{grid-template-columns:1fr;gap:28px;padding:24px 20px}
+  .roll{padding:4px 20px 24px}
+  .roll-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:44%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+  .roll-grid figure{scroll-snap-align:start}
+  .meta-grid{grid-template-columns:1fr}
+  .meta-photos{padding:20px 20px 0}
+  .meta-text{border-left:0;padding:24px 20px}
+  .cases{grid-template-columns:1fr}
+  .case{padding:22px 20px;border-right:0!important;border-bottom:1px solid var(--line)!important}
+  .case:last-child{border-bottom:0!important}
+  .pages{grid-template-columns:1fr 1fr}
+  .rounds-chips{padding:0 20px 24px}
+}
 
 /* ───────────────────────── off the clock ───────────────────────── */
 .life{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin-top:44px}
@@ -351,11 +420,7 @@ footer{padding:130px 0 140px;color:var(--muted)}
     </div>
     <div class="route px" aria-label="Egypt, then Saudi Arabia, then Berkeley">
       <canvas class="sprite plane" data-sprite="plane" data-scale="2"></canvas>
-      <div class="stop"><canvas class="sprite" data-sprite="pyramids" data-scale="2.4"></canvas><b>Egypt</b></div>
-      <span class="seg"></span>
-      <div class="stop"><canvas class="sprite" data-sprite="kingdom" data-scale="2"></canvas><b>Saudi Arabia</b></div>
-      <span class="seg"></span>
-      <div class="stop"><canvas class="sprite" data-sprite="campanile" data-scale="2"></canvas><b>Berkeley</b></div>
+      <b>Egypt</b><span class="seg"></span><b>Saudi Arabia</b><span class="seg"></span><b>Berkeley</b>
     </div>
     <div class="meta px">
       <span>B.S. Mechanical Engineering</span>
@@ -407,7 +472,119 @@ footer{padding:130px 0 140px;color:var(--muted)}
 <!-- ═════════════ PORTFOLIO ═════════════ -->
 <section class="block wrap wide" id="portfolio">
   <h2><span class="num">03</span><span class="ht">Portfolio</span><span class="me-wrap" data-say="10M views!"><canvas class="me" data-pose="wave" data-scale="3"></canvas></span></h2>
-  <div id="pf"></div>
+
+  <div class="pf-label px">marketing</div>
+
+  <article class="window proj reveal" id="p-akmtote">
+    <div class="bar"><span>akmtote.mp4</span><span class="btns"><i></i><i></i><i></i></span></div>
+    <div class="proj-head">
+      <div>
+        <span class="role px">Content creator · Nov 2025 – now</span>
+        <h3>@akmtote</h3>
+        <p class="kicker">The “college older brother.”</p>
+      </div>
+      <div class="links">
+        <a class="btn sm" href="https://www.instagram.com/akmtote" target="_blank" rel="noopener">instagram ↗</a>
+        <a class="btn sm" href="https://www.tiktok.com/@akmtote" target="_blank" rel="noopener">tiktok ↗</a>
+        <a class="btn sm" href="https://www.linkedin.com/in/ahmed-elbanna-ca" target="_blank" rel="noopener">linkedin ↗</a>
+      </div>
+    </div>
+    <div class="statwall">
+      <div><b>10M+</b><span>views</span></div>
+      <div><b>300K+</b><span>likes</span></div>
+      <div><b>10K+</b><span>followers</span></div>
+      <div><b>20+</b><span>brand deals</span></div>
+      <div><b>+200%</b><span>video retention from testing hooks</span></div>
+      <div><b>5K</b><span>LinkedIn connections</span></div>
+    </div>
+    <div class="proj-body">
+      <div class="prose">
+        <p>I make videos for students figuring out college: what to apply to, how to pay for it, what campus life is really like, and how to break into tech. The people watching are college and international students, creatives, and people in AI and tech.</p>
+        <p>I run the account like a product. I test hooks across audience segments, keep the formats that hold attention and drop the ones that don’t, which is how retention went up 200%. I also run brand partnerships end to end, from the pitch and creative direction to the final deliverables.</p>
+      </div>
+      <aside class="facts">
+        <div class="fact"><span class="px">audience</span><div class="tagset"><i>college students</i><i>international students</i><i>creatives</i><i>AI &amp; tech</i></div></div>
+        <div class="fact"><span class="px">brands I’ve worked with</span><div class="tagset"><i>Poppi</i><i>Anua</i><i>and 18+ more</i></div></div>
+        <div class="fact"><span class="px">platforms</span><div class="tagset"><i>Instagram</i><i>TikTok</i><i>LinkedIn</i></div></div>
+      </aside>
+    </div>
+    <div class="roll">
+      <div class="roll-label px">camera roll · content styles</div>
+      <div class="roll-grid">
+        <figure><img src="assets/portfolio/content-vlog.jpg" alt="Vlog: day 1 of documenting engineering at Berkeley" loading="lazy"><figcaption>Vlogs</figcaption></figure>
+        <figure><img src="assets/portfolio/content-skit.jpg" alt="Skit: learning CAD for the first time" loading="lazy"><figcaption>Skits</figcaption></figure>
+        <figure><img src="assets/portfolio/content-advice.jpg" alt="Advice: 3 cards you need to own in college" loading="lazy"><figcaption>Advice</figcaption></figure>
+        <figure><img src="assets/portfolio/content-tour.jpg" alt="Campus: UC Berkeley dorm tour" loading="lazy"><figcaption>Campus tours</figcaption></figure>
+      </div>
+    </div>
+  </article>
+
+  <article class="window proj reveal" id="p-meta">
+    <div class="bar"><span>meta_creator_program.jpg</span><span class="btns"><i></i><i></i><i></i></span></div>
+    <div class="meta-grid">
+      <div class="meta-photos">
+        <img src="assets/portfolio/meta-instagram.jpg" alt="Ahmed at Meta, in front of the Instagram logo wall" loading="lazy">
+        <img src="assets/portfolio/meta-facebook.jpg" alt="Ahmed at Meta, in front of the Facebook wall" loading="lazy">
+      </div>
+      <div class="meta-text">
+        <span class="role px">Invited creator · Meta</span>
+        <h3>Facebook campus creator program</h3>
+        <p>A Facebook product manager reached out to me directly to join a small group of about 30 creators at Meta for Facebook’s campus ambassador program. We spent the day learning about Facebook’s creator programs and how to cross-post content across Meta’s apps.</p>
+        <div class="tagset"><i>1 of ~30 creators</i><i>invited by a Facebook PM</i></div>
+      </div>
+    </div>
+  </article>
+
+  <div class="pf-label px">product</div>
+
+  <article class="window proj reveal" id="p-ecc">
+    <div class="bar"><span>elbanna_college_consulting.crm</span><span class="btns"><i></i><i></i><i></i></span></div>
+    <div class="proj-head">
+      <div>
+        <span class="role px">Founder · May 2026 – now</span>
+        <h3>Elbanna College Consulting</h3>
+        <p class="kicker">College admissions consulting for students in the Middle East applying to the US and Canada.</p>
+      </div>
+    </div>
+    <div class="statwall s4">
+      <div><b>$10K+</b><span>profit</span></div>
+      <div><b>10+</b><span>sales reps hired and trained</span></div>
+      <div><b>5+</b><span>countries</span></div>
+      <div><b>3–5</b><span>students per cycle, by design</span></div>
+    </div>
+    <div class="cases">
+      <div class="case"><h4>The gap</h4><p>Most college consulting gives every applicant the same playbook. Students in the Middle East apply with a different context: where they live, regional politics, family expectations, and schools that don’t know the US system. Nobody was advising for that.</p></div>
+      <div class="case"><h4>What I built</h4><p>Two tracks priced by grade. Intilaq (“the launch”) is a seven-month sprint to submission for seniors. Rihla (“the journey”) is a monthly plan for juniors and sophomores that builds the student behind the application. I capped each cycle at 3–5 students and designed the bilingual brand and brochures myself.</p></div>
+      <div class="case"><h4>How I got clients</h4><p>I went where parents already were: WhatsApp groups and large education communities across the Gulf. I built my own CRM with a lead-scoring model that predicts who will sign after a sales call, then hired sales development reps and trained them in a three-day crash course.</p></div>
+      <div class="case"><h4>Results</h4><p>$10K+ in profit, with a team of 10+ sales reps sourcing and qualifying families across 5+ countries.</p></div>
+    </div>
+    <div class="roll">
+      <div class="roll-label px">brochures · click to open</div>
+      <div class="pages">
+        <a href="assets/portfolio/ecc-brochure-1.jpg" target="_blank" rel="noopener"><img src="assets/portfolio/ecc-brochure-1.jpg" alt="Brochure page 1: who I am" loading="lazy"></a>
+        <a href="assets/portfolio/ecc-brochure-2.jpg" target="_blank" rel="noopener"><img src="assets/portfolio/ecc-brochure-2.jpg" alt="Brochure page 2: Intilaq track" loading="lazy"></a>
+        <a href="assets/portfolio/ecc-brochure-3.jpg" target="_blank" rel="noopener"><img src="assets/portfolio/ecc-brochure-3.jpg" alt="Brochure page 3: Rihla track" loading="lazy"></a>
+        <a href="assets/portfolio/ecc-pricing.jpg" target="_blank" rel="noopener"><img src="assets/portfolio/ecc-pricing.jpg" alt="Pricing sheet" loading="lazy"></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="window proj reveal" id="p-rounds">
+    <div class="bar"><span>rounds_demo.mp4</span><span class="btns"><i></i><i></i><i></i></span></div>
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/4vAOnwVCXHk?rel=0" title="Rounds demo video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="proj-head">
+      <div>
+        <span class="role px">Product design lead · Aug 2026</span>
+        <h3>Rounds</h3>
+        <p class="kicker">A voice assistant that lets nurses log notes and pull up patient records hands-free during a shift. We built it in 24 hours at the VoiceOS hackathon, a team of four from Berkeley and Stanford. I led product design, scoped the 9 voice tools and built the data layer the agent reads from. After the hackathon, we took it to real nurses to learn what to fix next.</p>
+      </div>
+      <div class="links">
+        <a class="btn sm" href="https://youtu.be/4vAOnwVCXHk" target="_blank" rel="noopener">youtube ↗</a>
+        <a class="btn sm" href="https://github.com/vivkao/Rounds_VoiceOS_Application" target="_blank" rel="noopener">github ↗</a>
+      </div>
+    </div>
+    <div class="tagset rounds-chips"><i>24-hour hackathon</i><i>team of 4 · Berkeley + Stanford</i><i>9 voice tools</i><i>tested with nurses</i></div>
+  </article>
 </section>
 
 <!-- ═════════════ OFF THE CLOCK ═════════════ -->
@@ -546,21 +723,6 @@ const TOOLKIT = [
   { d: "Coursework", t: ["Programming & Abstraction","Signals & Information Processing","Prototyping & Fabrication"] }
 ];
 
-/* To add a photo: upload it next to index.html and set img: "photo.jpg" */
-const PORTFOLIO = [
-  { group: "marketing", file: "akmtote.mp4", title: "@akmtote", role: "Founder & creator · Nov 2025 – now", sprite: "phone", img: "",
-    desc: "My social media platform for college advice, the college experience, and college lifestyle, on Instagram, TikTok, and LinkedIn. I’ve been posting since November 2025.",
-    nums: [["10M+", "views"], ["300K+", "likes"], ["10K+", "followers"], ["20+", "brand deals"]],
-    links: [{ label: "instagram ↗", href: "https://www.instagram.com/akmtote" }, { label: "tiktok ↗", href: "https://www.tiktok.com/@akmtote" }] },
-  { group: "product", file: "elbanna_consulting.crm", title: "Elbanna College Consulting", role: "Founder · May 2026 – now", sprite: "chart", img: "",
-    desc: "A college consulting business I started for high school students applying to college. I trained and managed a sales team across the Gulf and built our own CRM, including a lead-scoring model that predicts which leads will sign up.",
-    nums: [["$10K+", "profit"], ["10+", "sales reps trained"], ["5+", "Gulf countries"]],
-    links: [] },
-  { group: "product", file: "rounds.prd", title: "Rounds", role: "Product design lead · Aug 2026", sprite: "heart", img: "",
-    desc: "An AI shift assistant that lets nurses log notes and pull up patient records hands-free. I led product design on a team of 4, wrote the PRD, mapped the nurse user flows, and built the data layer the AI agent uses to pull medication and patient records in real time.",
-    nums: [["9", "voice tools scoped"], ["4", "person team"]],
-    links: [{ label: "demo ↗", href: "" }, { label: "github ↗", href: "" }] }
-];
 
 /* ══════════════════════════ engine ══════════════════════════ */
 document.documentElement.classList.add("js");
@@ -888,25 +1050,6 @@ $("#log").innerHTML = LOG.map((e, i) => `
   </details>`).join("");
 $("#toolkit").innerHTML = TOOLKIT.map(t => `<div class="d">${t.d}</div><div class="tags">${t.t.map(x => `<span class="tag">${x}</span>`).join("")}</div>`).join("");
 
-/* ---------- portfolio ---------- */
-$("#pf").innerHTML = PORTFOLIO.map((it, i) => {
-  const first = !i || PORTFOLIO[i-1].group !== it.group;
-  const span = PORTFOLIO.filter(p => p.group === it.group).length;
-  return `${first ? `<div class="pf-label px" style="--span:${span}">${it.group}</div>` : ""}
-    <article class="window card reveal${first ? "" : " same"}">
-      <div class="bar"><span>${it.file}</span><span class="btns"><i></i><i></i><i></i></span></div>
-      <div class="inner">
-        <div class="thumb">${it.img ? `<img src="${it.img}" alt="${it.title}" loading="lazy">` : `<canvas class="sprite" data-sprite="${it.sprite}" data-scale="7"></canvas>`}</div>
-        <div class="body">
-          <span class="role px">${it.role}</span>
-          <h3>${it.title}</h3>
-          <p>${it.desc}</p>
-          ${(it.links || []).filter(l => l.href).length ? `<div class="links">${it.links.filter(l => l.href).map(l => `<a class="btn sm" href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`).join("")}</div>` : ""}
-        </div>
-      </div>
-      <div class="nums n${it.nums.length}">${it.nums.map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("")}</div>
-    </article>`;
-}).join("");
 
 /* ---------- fragrance shelf ---------- */
 (function(){
