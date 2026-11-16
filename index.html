@@ -200,6 +200,19 @@ h2 .ht{position:relative;display:inline-block}
 .card .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
 
 /* projects (flat, all visible) */
+#portfolio .pf-group{display:flex;align-items:center;gap:14px;margin:80px 0 22px}
+#portfolio .pf-group .sq{width:14px;height:14px;background:var(--accent);margin:0;flex:0 0 14px}
+#portfolio .pf-group .g-name{font-family:var(--pixel);font-weight:600;font-size:clamp(28px,3vw,36px);line-height:1;color:var(--accent)}
+#portfolio .pf-group::after{content:"";flex:1;height:2px;background:var(--accent);opacity:.35}
+.proj-body.single{grid-template-columns:minmax(0,820px)}
+.cases.two .case{border-bottom:0}
+.more{border-top:1px solid var(--line)}
+.more summary{list-style:none;cursor:pointer;padding:16px 32px;color:var(--accent);font-size:15px}
+.more summary::-webkit-details-marker{display:none}
+.more summary:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.more .close-t,.more[open] .open-t{display:none}
+.more[open] .close-t{display:inline}
+.more[open] .roll{padding-top:4px}
 #portfolio .pf-label{display:flex;align-items:center;gap:12px;color:var(--muted);margin:64px 0 18px}
 #portfolio .pf-label::after{content:"";flex:1;height:1px;background:var(--line)}
 .proj{box-shadow:8px 8px 0 var(--ink);overflow:hidden}
@@ -243,7 +256,7 @@ h2 .ht{position:relative;display:inline-block}
 .case:nth-last-child(-n+2){border-bottom:0}
 .case h4{font-family:var(--pixel);font-weight:600;font-size:19px;color:var(--accent);margin-bottom:10px}
 .case p{font-size:16px;line-height:1.7}
-#p-ecc .roll{padding-top:28px}
+
 .pages{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .pages img{width:100%;aspect-ratio:1/1.414;object-fit:cover;object-position:top;border:1px solid var(--line);background:#fff;transition:transform .25s ease}
 .pages a:hover img{transform:translateY(-4px)}
@@ -267,7 +280,7 @@ h2 .ht{position:relative;display:inline-block}
   .case{padding:22px 20px;border-right:0!important;border-bottom:1px solid var(--line)!important}
   .case:last-child{border-bottom:0!important}
   .pages{grid-template-columns:1fr 1fr}
-  .rounds-chips{padding:0 20px 24px}
+  .more summary{padding:14px 20px}
 }
 
 /* ───────────────────────── off the clock ───────────────────────── */
@@ -473,7 +486,7 @@ footer{padding:130px 0 140px;color:var(--muted)}
 <section class="block wrap wide" id="portfolio">
   <h2><span class="num">03</span><span class="ht">Portfolio</span><span class="me-wrap" data-say="10M views!"><canvas class="me" data-pose="wave" data-scale="3"></canvas></span></h2>
 
-  <div class="pf-label px">marketing</div>
+  <div class="pf-group"><span class="sq"></span><span class="g-name">Marketing</span></div>
 
   <article class="window proj reveal" id="p-akmtote">
     <div class="bar"><span>akmtote.mp4</span><span class="btns"><i></i><i></i><i></i></span></div>
@@ -497,16 +510,10 @@ footer{padding:130px 0 140px;color:var(--muted)}
       <div><b>+200%</b><span>video retention from testing hooks</span></div>
       <div><b>5K</b><span>LinkedIn connections</span></div>
     </div>
-    <div class="proj-body">
+    <div class="proj-body single">
       <div class="prose">
         <p>I make videos for students figuring out college: what to apply to, how to pay for it, what campus life is really like, and how to break into tech. The people watching are college and international students, creatives, and people in AI and tech.</p>
-        <p>I run the account like a product. I test hooks across audience segments, keep the formats that hold attention and drop the ones that don’t, which is how retention went up 200%. I also run brand partnerships end to end, from the pitch and creative direction to the final deliverables.</p>
       </div>
-      <aside class="facts">
-        <div class="fact"><span class="px">audience</span><div class="tagset"><i>college students</i><i>international students</i><i>creatives</i><i>AI &amp; tech</i></div></div>
-        <div class="fact"><span class="px">brands I’ve worked with</span><div class="tagset"><i>Poppi</i><i>Anua</i><i>and 18+ more</i></div></div>
-        <div class="fact"><span class="px">platforms</span><div class="tagset"><i>Instagram</i><i>TikTok</i><i>LinkedIn</i></div></div>
-      </aside>
     </div>
     <div class="roll">
       <div class="roll-label px">camera roll · content styles</div>
@@ -530,12 +537,11 @@ footer{padding:130px 0 140px;color:var(--muted)}
         <span class="role px">Invited creator · Meta</span>
         <h3>Facebook campus creator program</h3>
         <p>A Facebook product manager reached out to me directly to join a small group of about 30 creators at Meta for Facebook’s campus ambassador program. We spent the day learning about Facebook’s creator programs and how to cross-post content across Meta’s apps.</p>
-        <div class="tagset"><i>1 of ~30 creators</i><i>invited by a Facebook PM</i></div>
       </div>
     </div>
   </article>
 
-  <div class="pf-label px">product</div>
+  <div class="pf-group"><span class="sq"></span><span class="g-name">Product</span></div>
 
   <article class="window proj reveal" id="p-ecc">
     <div class="bar"><span>elbanna_college_consulting.crm</span><span class="btns"><i></i><i></i><i></i></span></div>
@@ -552,12 +558,12 @@ footer{padding:130px 0 140px;color:var(--muted)}
       <div><b>5+</b><span>countries</span></div>
       <div><b>3–5</b><span>students per cycle, by design</span></div>
     </div>
-    <div class="cases">
-      <div class="case"><h4>The gap</h4><p>Most college consulting gives every applicant the same playbook. Students in the Middle East apply with a different context: where they live, regional politics, family expectations, and schools that don’t know the US system. Nobody was advising for that.</p></div>
-      <div class="case"><h4>What I built</h4><p>Two tracks priced by grade. Intilaq (“the launch”) is a seven-month sprint to submission for seniors. Rihla (“the journey”) is a monthly plan for juniors and sophomores that builds the student behind the application. I capped each cycle at 3–5 students and designed the bilingual brand and brochures myself.</p></div>
-      <div class="case"><h4>How I got clients</h4><p>I went where parents already were: WhatsApp groups and large education communities across the Gulf. I built my own CRM with a lead-scoring model that predicts who will sign after a sales call, then hired sales development reps and trained them in a three-day crash course.</p></div>
-      <div class="case"><h4>Results</h4><p>$10K+ in profit, with a team of 10+ sales reps sourcing and qualifying families across 5+ countries.</p></div>
+    <div class="cases two">
+      <div class="case"><h4>The gap</h4><p>Most college consultants use one playbook for every applicant. Students in the Middle East apply with different context: where they live, regional politics, family expectations, and high schools that don’t know the US system. That’s the gap I started this business to fill.</p></div>
+      <div class="case"><h4>What I built</h4><p>Two tracks by grade: Intilaq, a seven-month sprint to submission for seniors, and Rihla, a monthly plan for juniors and sophomores. To find families, I went to WhatsApp groups and education communities across the Gulf, built my own CRM to score leads, and trained a team of 10+ sales reps in a three-day crash course.</p></div>
     </div>
+    <details class="more">
+      <summary class="px"><span class="open-t">read more · brochures ↓</span><span class="close-t">show less ↑</span></summary>
     <div class="roll">
       <div class="roll-label px">brochures · click to open</div>
       <div class="pages">
@@ -567,6 +573,7 @@ footer{padding:130px 0 140px;color:var(--muted)}
         <a href="assets/portfolio/ecc-pricing.jpg" target="_blank" rel="noopener"><img src="assets/portfolio/ecc-pricing.jpg" alt="Pricing sheet" loading="lazy"></a>
       </div>
     </div>
+    </details>
   </article>
 
   <article class="window proj reveal" id="p-rounds">
@@ -583,7 +590,6 @@ footer{padding:130px 0 140px;color:var(--muted)}
         <a class="btn sm" href="https://github.com/vivkao/Rounds_VoiceOS_Application" target="_blank" rel="noopener">github ↗</a>
       </div>
     </div>
-    <div class="tagset rounds-chips"><i>24-hour hackathon</i><i>team of 4 · Berkeley + Stanford</i><i>9 voice tools</i><i>tested with nurses</i></div>
   </article>
 </section>
 
