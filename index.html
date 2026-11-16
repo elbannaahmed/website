@@ -84,7 +84,9 @@ h1#name .w{display:inline-block}
 
 /* ───────────────────────── me (pixel ahmed) ───────────────────────── */
 .me-wrap{position:relative;cursor:pointer;flex:0 0 auto}
-.me-wrap.jump canvas{animation:jump .5s steps(5)}
+.me-wrap.jump canvas,.me-wrap.jump img{animation:jump .5s steps(5)}
+.photo-me{display:block;width:112px;height:auto}
+@media (max-width:760px){.photo-me{width:84px}}
 @keyframes jump{40%{transform:translateY(-14px)}}
 .say{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--ink);color:var(--bg);
   font-family:var(--pixel);font-size:14px;padding:6px 11px 7px;clip-path:var(--px);opacity:0;pointer-events:none;transition:opacity .15s steps(2)}
@@ -316,7 +318,7 @@ footer{padding:130px 0 140px;color:var(--muted)}
     <div class="status px"><span class="dot"></span><span>open to summer 2027</span></div>
     <div class="hero-row">
       <h1 id="name" title="click me"><span class="w">Ahmed</span> <span class="w">Elbanna</span></h1>
-      <div class="me-wrap" data-say="hey, i’m ahmed!"><canvas class="me" data-pose="wave" data-scale="4.2" data-scale-sm="3.4"></canvas></div>
+      <div class="me-wrap" data-say="hey, i’m ahmed!"><img class="photo-me" src="img/me-wave0.png" alt="Ahmed" width="112" height="126"></div>
     </div>
     <div class="typed" aria-label="Engineer, founder, creator"><span id="typed"></span><span class="caret"></span></div>
     <div class="hero-cta">
@@ -619,6 +621,16 @@ function sayHi(w, quiet){
   if (!quiet) { w.classList.remove("jump"); void w.offsetWidth; w.classList.add("jump"); }
   clearTimeout(w._t); w._t = setTimeout(() => b.classList.remove("on"), 2400);
 }
+
+/* ---------- hero photo figure: waves, then rests ---------- */
+(function(){
+  const img = $(".photo-me"); if (!img) return;
+  const src = { w0: "img/me-wave0.png", w1: "img/me-wave1.png", rest: "img/me-rest.png" };
+  Object.values(src).forEach(u => { const i = new Image(); i.src = u; });
+  if (reduced) { img.src = src.rest; return; }
+  let t = 0;
+  setInterval(() => { t++; const c = t % 14; img.src = c < 8 ? (c % 2 ? src.w1 : src.w0) : src.rest; }, 260);
+})();
 
 /* ---------- theme ---------- */
 const themeBtn = $("#theme");
